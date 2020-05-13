@@ -1,12 +1,12 @@
-<h1> Heroes de Marvel y Dc </h1>
+<h1> Heroes de Marvel y DC </h1>
 <hr>
 <div class="card-columns">
-    <div class="card">
-        <img src="/assets/img/aquaman.png" class="card-img-top" alt="Aquaman">
+    <div class="card animated fadeIn fast" *ngFor="let heroe of heroes">
+        <img [src]="heroe.img" class="card-img-top" [alt]="heroe.img">
         <div class="card-body">
-            <h5 class="card-title"></h5>
-            <p class="card-text"></p>
-            <p class="card-text"><small class="text-muted"></small></p>
+            <h5 class="card-title"> {{heroe.nombre}}</h5>
+            <p class="card-text">{{heroe.bio}}</p>
+            <p class="card-text"><small class="text-muted">{{heroe.aparicion}}</small></p>
             <div class="btn btn-outline-primary btn-block">Ver más</div>
         </div>
     </div>
