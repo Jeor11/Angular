@@ -71,10 +71,13 @@ export class HeroesService {
     const HEROESARR: Heroe[] = [];
     termino = termino.toUpperCase();
 
-    for ( const HEROE of this.heroes ){
+    // tslint:disable-next-line: prefer-for-of
+    for ( let i = 0; i < this.heroes.length; i++ ){
+      const HEROE =  this.heroes[i];
       const NOMBRE = HEROE.nombre.toUpperCase();
 
       if (NOMBRE.indexOf(termino) >= 0 ){
+        HEROE.idx = i;
         HEROESARR.push(HEROE);
       }
     }
@@ -89,5 +92,6 @@ bio: string;
 img: string;
 aparicion: string;
 casa: string;
+idx: number;
 
 }
