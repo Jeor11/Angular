@@ -74,7 +74,7 @@ export class HeroesService {
     for ( const HEROE of this.heroes ){
       const NOMBRE = HEROE.nombre.toUpperCase();
 
-      if (NOMBRE.indexOf(termino) >= 1 ){
+      if (NOMBRE.indexOf(termino) >= 0 ){
         HEROESARR.push(HEROE);
       }
     }
